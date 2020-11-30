@@ -4,10 +4,10 @@ namespace App\Http\Controllers\API;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Book;
+use App\Patient;
 use Validator;
 
-class BookController extends Controller
+class PatientController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,13 +16,13 @@ class BookController extends Controller
      */
     public function index()
     {
-        $books = Book::all();
-        $data = $books->toArray();
+        $patient = Patient::all();
+        $data = $patient->toArray();
 
         $response = [
             'success' => true,
             'data' => $data,
-            'message' => 'Books retrieved successfully.'
+            'message' => 'Patients retrieved successfully.'
         ];
 
         return response()->json($response, 200);
@@ -41,7 +41,7 @@ class BookController extends Controller
 
         $validator = Validator::make($input, [
             'name' => 'required',
-            'author' => 'required'
+            'surname' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -53,13 +53,13 @@ class BookController extends Controller
             return response()->json($response, 404);
         }
 
-        $book = Book::create($input);
-        $data = $book->toArray();
+        $patient = Patient::create($input);
+        $data = $patient->toArray();
 
         $response = [
             'success' => true,
             'data' => $data,
-            'message' => 'Book stored successfully.'
+            'message' => 'Patient stored successfully.'
         ];
 
         return response()->json($response, 200);
@@ -74,14 +74,14 @@ class BookController extends Controller
      */
     public function show($id)
     {
-        $book = Book::find($id);
-        $data = $book->toArray();
+        $patient = Patient::find($id);
+        $data = $patient->toArray();
 
-        if (is_null($book)) {
+        if (is_null($patient)) {
             $response = [
                 'success' => false,
                 'data' => 'Empty',
-                'message' => 'Book not found.'
+                'message' => 'Patient not found.'
             ];
             return response()->json($response, 404);
         }
@@ -90,7 +90,7 @@ class BookController extends Controller
         $response = [
             'success' => true,
             'data' => $data,
-            'message' => 'Book retrieved successfully.'
+            'message' => 'Patient retrieved successfully.'
         ];
 
         return response()->json($response, 200);
@@ -104,13 +104,13 @@ class BookController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Book $book)
+    public function update(Request $request, Patient $patient)
     {
         $input = $request->all();
 
         $validator = Validator::make($input, [
             'name' => 'required',
-            'author' => 'required'
+            'surname' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -122,16 +122,17 @@ class BookController extends Controller
             return response()->json($response, 404);
         }
 
-        $book->name = $input['name'];
-        $book->author = $input['author'];
-        $book->save();
+        $patient->name = $input['name'];
+        $patient->author = $input['surname'];
+        $patient->birth = $input['birth'];
+        $patient->save();
 
-        $data = $book->toArray();
+        $data = $patient->toArray();
 
         $response = [
             'success' => true,
             'data' => $data,
-            'message' => 'Book updated successfully.'
+            'message' => 'Patient updated successfully.'
         ];
 
         return response()->json($response, 200);
@@ -144,15 +145,15 @@ class BookController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Book $book)
+    public function destroy(Patient $patient)
     {
-        $book->delete();
-        $data = $book->toArray();
+        $patient->delete();
+        $data = $patient->toArray();
 
         $response = [
             'success' => true,
             'data' => $data,
-            'message' => 'Book deleted successfully.'
+            'message' => 'Patient deleted successfully.'
         ];
 
         return response()->json($response, 200);

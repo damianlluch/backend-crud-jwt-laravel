@@ -20,13 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="366dfe24-317f-4cdf-9978-1140d355c28f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravelcrud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelcrud.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Book.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Patient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/BookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/PatientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_03_21_153350_create_books_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_03_21_153350_create_patients_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +180,7 @@
       <updated>1553181375035</updated>
       <workItem from="1553181381795" duration="7967000" />
       <workItem from="1553199059761" duration="1147000" />
-      <workItem from="1606777547626" duration="539000" />
+      <workItem from="1606777547626" duration="1712000" />
     </task>
     <servers />
   </component>
@@ -199,5 +197,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="743" y="233" width="487" height="655" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606778933757">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="743" y="233" width="487" height="655" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1848.1053/1920.0.1280.720@72.27.1848.1053" timestamp="1606778933757" />
+    <state x="687" y="292" width="629" height="522" key="find.popup" timestamp="1606779141148">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="687" y="292" width="629" height="522" key="find.popup/72.27.1848.1053/1920.0.1280.720@72.27.1848.1053" timestamp="1606779141148" />
   </component>
 </project>

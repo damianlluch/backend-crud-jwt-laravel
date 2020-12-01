@@ -123,7 +123,7 @@ class PatientController extends Controller
         }
 
         $patient->name = $input['name'];
-        $patient->author = $input['surname'];
+        $patient->surname = $input['surname'];
         $patient->birth = $input['birth'];
         $patient->save();
 
